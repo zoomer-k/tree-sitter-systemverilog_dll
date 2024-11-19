@@ -65,4 +65,5 @@ jobs:
         run: ls
 
       - name: build dll
+        working-directory: tree-sitter-systemverilog
         run: tree-sitter generate
