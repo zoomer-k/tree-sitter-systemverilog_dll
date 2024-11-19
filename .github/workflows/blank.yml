@@ -56,4 +56,4 @@ jobs:
         uses: tree-sitter/setup-action@v2
 
       - name: build dll
-        run: tree-sitter test
+        run: tree-sitter generate
