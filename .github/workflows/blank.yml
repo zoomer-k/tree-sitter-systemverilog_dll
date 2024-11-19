@@ -36,4 +36,4 @@ jobs:
           echo test, and deploy your project.
 
       - name: submodule
-        run: git submodule git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
+        run: git submodule add git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
