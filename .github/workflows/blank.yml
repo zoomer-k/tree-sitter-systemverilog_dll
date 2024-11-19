@@ -37,10 +37,16 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      - name: ls
+        run: ls
+
       - name: submodule
         #run: git submodule add git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
         run: git submodule update --remote --recursive 
 
+      - name: ls
+        run: ls
+
       - name: Run git status
         id: status
-        run: echo "::set-output name=status::$(git status -s)"
+        run: git status
