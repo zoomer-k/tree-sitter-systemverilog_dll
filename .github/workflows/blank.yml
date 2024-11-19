@@ -41,8 +41,8 @@ jobs:
         run: ls
 
       - name: submodule
-        #run: git submodule add git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
-        run: git submodule update --remote --recursive 
+        run: git submodule add https://github.com/gmlarumbe/tree-sitter-systemverilog
+        #run: git submodule update --remote --recursive 
 
       - name: ls
         run: ls
