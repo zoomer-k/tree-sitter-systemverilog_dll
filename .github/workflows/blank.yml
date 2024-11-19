@@ -59,7 +59,7 @@ jobs:
         run: ls
 
       - name: setup tree-sitter
-        uses: tree-sitter/setup-action@v1
+        uses: tree-sitter/setup-action@v2
 
       - name: ls
         run: ls
