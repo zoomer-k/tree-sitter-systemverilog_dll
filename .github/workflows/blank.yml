@@ -71,3 +71,6 @@ jobs:
       - name: ls
         working-directory: tree-sitter-systemverilog
         run: ls
+
+      - name: ls
+        run: ls
