@@ -52,6 +52,9 @@ jobs:
         id: status
         run: git status
 
+      - name: cd submodule
+        run: cd tree-sitter-systemverilog
+
       - name: setup tree-sitter
         uses: tree-sitter/setup-action@v2
 
