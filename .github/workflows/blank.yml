@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -36,4 +38,5 @@ jobs:
           echo test, and deploy your project.
 
       - name: submodule
-        run: git submodule add git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
+        #run: git submodule add git@github.com:gmlarumbe/tree-sitter-systemverilog submodule
+        run: git submodule update --remote --recursive 
