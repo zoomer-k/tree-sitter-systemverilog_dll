@@ -73,5 +73,11 @@ jobs:
         working-directory: tree-sitter-systemverilog
         run: ls
 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dll
+          path: tree-sitter-systemverilog/verilog.so
+
       - name: ls
         run: ls
