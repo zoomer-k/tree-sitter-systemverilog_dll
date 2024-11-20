@@ -57,6 +57,8 @@ jobs:
 
       - name: setup tree-sitter
         uses: tree-sitter/setup-action@v2
+        with:
+          install-lib: false
 
       - name: ls
         run: ls
