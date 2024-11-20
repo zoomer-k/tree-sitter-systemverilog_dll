@@ -59,7 +59,8 @@ jobs:
         run: ls
 
       - name: setup tree-sitter
-        uses: tree-sitter/setup-action@v2
+        #uses: tree-sitter/setup-action@v2
+        run: npm install tree-sitter-cli
 
       - name: ls
         run: ls
