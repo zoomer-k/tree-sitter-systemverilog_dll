@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -51,15 +51,14 @@ jobs:
       - name: Run git status
         id: status
         run: git status
-
-      - name: cd submodule
-        run: cd tree-sitter-systemverilog
       
       - name: ls
         run: ls
 
       - name: setup tree-sitter
         uses: tree-sitter/setup-action@v2
+        with:
+          install-lib: false
 
       - name: ls
         run: ls
@@ -67,7 +66,7 @@ jobs:
       - name: build dll
         working-directory: tree-sitter-systemverilog
         #run: tree-sitter test
-        run:  tree-sitter generate -b --libdir .
+        run:  tree-sitter generate --abi 14 -b --libdir .
 
       - name: ls
         working-directory: tree-sitter-systemverilog
@@ -77,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dll
-          path: tree-sitter-systemverilog/verilog.so
+          path: tree-sitter-systemverilog/verilog.dll
 
       - name: ls
         run: ls
